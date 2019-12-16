@@ -24,7 +24,7 @@ pipeline {
          echo "TODO - build and push image2"
       }
       when {
-         beforeAgent true
+      
          branch 'master'
        }
       steps {
