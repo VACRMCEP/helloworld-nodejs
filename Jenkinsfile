@@ -6,14 +6,20 @@ pipeline {
   }
   stages {
     stage('Test') {
-            agent {
+      agent {
         kubernetes {
-          label 'nodejs-app-pod'
+          label 'nodejs-app-pod-2'
           yamlFile 'nodejs-pod.yaml'
         }
       }
+      steps {
+        checkout scm
+        container('nodejs') {
+          echo 'Hello World!'   
+          sh 'node --version'
+        }
       }
-    
+    }
     stage('Build and Push Image') {
       when {
         beforeAgent true
