@@ -23,13 +23,7 @@ pipeline {
       steps {
          echo "TODO - build and push image2"
       }
-      when {
       
-         branch 'master'
-       }
-      steps {
-         echo "Kollu TODO - build and push image"
-      }
     }
   }
 }
