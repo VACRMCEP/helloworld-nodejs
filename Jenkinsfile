@@ -19,10 +19,16 @@ pipeline {
       when {
          beforeAgent true
          branch 'master'
-        echo "TODO - build and push image inside container"
-      }
+       }
       steps {
          echo "TODO - build and push image"
+      }
+      when {
+         beforeAgent true
+         branch 'master'
+       }
+      steps {
+         echo "Kollu TODO - build and push image"
       }
     }
   }
