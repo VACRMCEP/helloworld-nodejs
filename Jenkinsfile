@@ -13,6 +13,7 @@ pipeline {
         }
       }
       }
+	  
     }
     stage('Build and Push Image') {
       when {
@@ -24,4 +25,4 @@ pipeline {
       }
     }
   }
-}
+
